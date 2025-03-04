@@ -107,6 +107,7 @@
 \crefname{section}{Sup. Note}{notes}
 \crefname{suppfigure}{Supplementary Figure}{supplementary figures}
 \crefname{supptable}{Supplementary Table}{supplementary tables}
+\usepackage{rotating}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Royle lab dependencies - End %%
@@ -307,9 +308,9 @@
 
 %% bibliography
 \RequirePackage{chapterbib} % outside of Overleaf, comment this line
-\RequirePackage[sectionbib,authoryear,round]{natbib}
+\RequirePackage[sectionbib,numbers,round]{natbib}
 \setlength{\bibsep}{0.0pt}
-\bibliographystyle{bxv_abbrvnat}
+\bibliographystyle{vancouver}
 \renewcommand{\bibsection}{} % Remove header
 \if@submit
   \renewcommand\bibfont{\normalfont\sffamily\fontsize{9}{10}\selectfont} % set font to be sans serif

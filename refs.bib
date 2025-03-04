@@ -119,10 +119,28 @@
 @misc{Seemann2023,
     author = {Seemann, T.},
     title = {Abricate},
-    year = {2024},
+    year = {2025},
     note = {GitHub repository},
     howpublished = {\url{https://github.com/tseemann/abricate}}
 }
+
+@article{Li2009,
+  author    = {Li, Heng and Handsaker, Bob and Wysoker, Alec and Fennell, Tim and Ruan, Jue and Homer, Nils and Marth, Gabor and Abecasis, Goncalo and Durbin, Richard},
+  title     = {The Sequence Alignment/Map format and SAMtools},
+  journal   = {Bioinformatics},
+  year      = {2009},
+  month     = {aug},
+  volume    = {25},
+  number    = {16},
+  pages     = {2078--2079},
+  doi       = {10.1093/bioinformatics/btp352},
+  issn      = {1367-4811},
+  url       = {https://doi.org/10.1093/bioinformatics/btp352},
+  abstract  = {The Sequence Alignment/Map (SAM) format is a generic alignment format for storing read alignments against reference sequences, supporting short and long reads (up to 128 Mbp) produced by different sequencing platforms. It is flexible in style, compact in size, efficient in random access and is the format in which alignments from the 1000 Genomes Project are released. SAMtools implements various utilities for post-processing alignments in the SAM format, such as indexing, variant caller and alignment viewer, and thus provides universal tools for processing read alignments. AVAILABILITY: http://samtools.sourceforge.net.},
+  pmid      = {19505943},
+  pmcid     = {PMC2723002}
+}
+
 
 @article{10.1093.nar.gkz935, 
     year = {2019}, 
@@ -414,9 +432,31 @@
 @misc{Shovill,
   author       = {Torsten Seemann},
   title        = {Shovill: Fast genome assembly for Illumina reads},
-  year         = {2024},
+  year         = {2025},
   howpublished = {\url{https://github.com/tseemann/shovill}},
   note         = {GitHub repository},
+}
+
+@misc{TNA,
+  author       = {Martin Hunt},
+  title        = {TNA},
+  year         = {2025},
+  howpublished = {\url{https://github.com/martinghunt/tna}},
+  note         = {GitHub repository},
+}
+
+@article{10.1186/s13059-021-02483-z,
+  author    = {Ryan R. Wick and Louise M. Judd and Louise T. Cerdeira and Jane Hawkey and Guillaume Méric and Ben Vezina and Kelly L. Wyres and Kathryn E. Holt},
+  title     = {Trycycler: consensus long-read assemblies for bacterial genomes},
+  journal   = {Genome Biology},
+  year      = {2021},
+  volume    = {22},
+  number    = {1},
+  pages     = {266},
+  doi       = {10.1186/s13059-021-02483-z},
+  url       = {https://doi.org/10.1186/s13059-021-02483-z},
+  issn      = {1474-760X},
+  abstract  = {While long-read sequencing allows for the complete assembly of bacterial genomes, long-read assemblies contain a variety of errors. Here, we present Trycycler, a tool which produces a consensus assembly from multiple input assemblies of the same genome. Benchmarking showed that Trycycler assemblies contained fewer errors than assemblies constructed with a single tool. Post-assembly polishing further reduced errors and Trycycler+polishing assemblies were the most accurate genomes in our study. As Trycycler requires manual intervention, its output is not deterministic. However, we demonstrated that multiple users converge on similar assemblies that are consistently more accurate than those produced by automated assembly tools.}
 }
 
 @article {Matlock2024.08.12.607562,
@@ -430,6 +470,38 @@
 	URL = {https://www.biorxiv.org/content/early/2024/08/12/2024.08.12.607562},
 	eprint = {https://www.biorxiv.org/content/early/2024/08/12/2024.08.12.607562.full.pdf},
 	journal = {bioRxiv}
+}
+
+@article{FosterNyarko2023,
+  author    = {Ebenezer Foster-Nyarko and Hugh Cottingham and Ryan R. Wick and Louise M. Judd and Margaret M. C. Lam and Kelly L. Wyres and Thomas D. Stanton and Kara K. Tsang and Sophia David and David M. Aanensen and Sylvain Brisse and Kathryn E. Holt},
+  title     = {Nanopore-only assemblies for genomic surveillance of the global priority drug-resistant pathogen, Klebsiella pneumoniae},
+  journal   = {Microbial Genomics},
+  year      = {2023},
+  volume    = {9},
+  number    = {2},
+  pages     = {mgen000936},
+  doi       = {10.1099/mgen.0.000936},
+  url       = {https://doi.org/10.1099/mgen.0.000936},
+  issn      = {2057-5858},
+  pmid      = {36752781},
+  pmcid     = {PMC9997738},
+  abstract  = {Oxford Nanopore Technologies (ONT) sequencing has rich potential for genomic epidemiology and public health investigations of bacterial pathogens, particularly in low-resource settings and at the point of care, due to its portability and affordability. However, low base-call accuracy has limited the reliability of ONT data for critical tasks such as antimicrobial resistance (AMR) and virulence gene detection and typing, serotype prediction, and cluster identification. Thus, Illumina sequencing remains the standard for genomic surveillance despite higher capital and running costs. We tested the accuracy of ONT-only assemblies for common applied bacterial genomics tasks (genotyping and cluster detection, implemented via Kleborate, Kaptive and Pathogenwatch), using data from 54 unique Klebsiella pneumoniae isolates. ONT reads generated via MinION with R9.4.1 flowcells were basecalled using three alternative models [Fast, High-accuracy (HAC) and Super-accuracy (SUP), available within ONT's Guppy software], assembled with Flye and polished using Medaka. Accuracy of typing using ONT-only assemblies was compared with that of Illumina-only and hybrid ONT+Illumina assemblies, constructed from the same isolates as reference standards. The most resource-intensive ONT-assembly approach (SUP basecalling, with or without Medaka polishing) performed best, yielding reliable capsule (K) type calls for all strains (100% exact or best matching locus), reliable multi-locus sequence type (MLST) assignment (98.3% exact match or single-locus variants), and good detection of acquired AMR genes and mutations (88-100% correct identification across the various drug classes). Distance-based trees generated from SUP+Medaka assemblies accurately reflected overall genetic relationships between isolates. The definition of outbreak clusters from ONT-only assemblies was problematic due to inflation of SNP counts by high base-call errors. However, ONT data could be reliably used to 'rule out' isolates of distinct lineages from suspected transmission clusters. HAC basecalling + Medaka polishing performed similarly to SUP basecalling without polishing. Therefore, we recommend investing compute resources into basecalling (SUP model), wherever compute resources and time allow, and note that polishing is also worthwhile for improved performance. Overall, our results show that MLST, K type and AMR determinants can be reliably identified with ONT-only R9.4.1 flowcell data. However, cluster detection remains challenging with this technology.},
+  keywords  = {AMR, Klebsiella pneumoniae, MLST, Nanopore sequencing, bacterial pathogens, basecalling, benchmarking, genomic surveillance, phylogenetic clustering, serotyping}
+}
+
+
+@article{KOREN2015110,
+title = {One chromosome, one contig: complete microbial genomes from long-read sequencing and assembly},
+journal = {Current Opinion in Microbiology},
+volume = {23},
+pages = {110-120},
+year = {2015},
+note = {Host–microbe interactions: bacteria • Genomics},
+issn = {1369-5274},
+doi = {https://doi.org/10.1016/j.mib.2014.11.014},
+url = {https://www.sciencedirect.com/science/article/pii/S1369527414001817},
+author = {Sergey Koren and Adam M Phillippy},
+abstract = {Like a jigsaw puzzle with large pieces, a genome sequenced with long reads is easier to assemble. However, recent sequencing technologies have favored lowering per-base cost at the expense of read length. This has dramatically reduced sequencing cost, but resulted in fragmented assemblies, which negatively affect downstream analyses and hinder the creation of finished (gapless, high-quality) genomes. In contrast, emerging long-read sequencing technologies can now produce reads tens of kilobases in length, enabling the automated finishing of microbial genomes for under $1000. This promises to improve the quality of reference databases and facilitate new studies of chromosomal structure and variation. We present an overview of these new technologies and the methods used to assemble long reads into complete genomes.}
 }
 
 @article{10.1038/s41559-016-0010,
@@ -515,6 +587,8 @@ keywords = {}
   abstract  = {Common culturing techniques and priorities bias our discovery towards specific traits that may not be representative of microbial diversity in nature. So far, these biases have not been systematically examined. To address this gap, here we use 116,884 publicly available metagenome-assembled genomes (MAGs, completeness ≥80\%) from 203 surveys worldwide as a culture-independent sample of bacterial and archaeal diversity, and compare these MAGs to the popular RefSeq genome database, which heavily relies on cultures. We compare the distribution of 12,454 KEGG gene orthologs (used as trait proxies) in the MAGs and RefSeq genomes, while controlling for environment type (ocean, soil, lake, bioreactor, human, and other animals). Using statistical modeling, we then determine the conditional probabilities that a species is represented in RefSeq depending on its genetic repertoire. We find that the majority of examined genes are significantly biased for or against in RefSeq. Our systematic estimates of gene prevalences across bacteria and archaea in nature and gene-specific biases in reference genomes constitutes a resource for addressing these issues in the future.}
 }
 
+@article{Katz2019, doi = {10.21105/joss.01762}, url = {https://doi.org/10.21105/joss.01762}, year = {2019}, publisher = {The Open Journal}, volume = {4}, number = {44}, pages = {1762}, author = {Lee S. Katz and Taylor Griswold and Shatavia S. Morrison and Jason A. Caravas and Shaokang Zhang and Henk C. den Bakker and Xiangyu Deng and Heather A. Carleton}, title = {Mashtree: a rapid comparison of whole genome sequence files}, journal = {Journal of Open Source Software} }
+
 @article{Waddington2022,
   author    = {Waddington, Claire and Carey, Megan E. and Boinett, Christine J. and Higginson, Ellen and Veeraraghavan, Balaji and Baker, Stephen},
   title     = {Exploiting genomics to mitigate the public health impact of antimicrobial resistance},
@@ -530,21 +604,6 @@ keywords = {}
   abstract  = {Antimicrobial resistance (AMR) is a major global public health threat, which has been largely driven by the excessive use of antimicrobials. Control measures are urgently needed to slow the trajectory of AMR but are hampered by an incomplete understanding of the interplay between pathogens, AMR encoding genes, and mobile genetic elements at a microbial level. These factors, combined with the human, animal, and environmental interactions that underlie AMR dissemination at a population level, make for a highly complex landscape. Whole-genome sequencing (WGS) and, more recently, metagenomic analyses have greatly enhanced our understanding of these processes, and these approaches are informing mitigation strategies for how we better understand and control AMR. This review explores how WGS techniques have advanced global, national, and local AMR surveillance, and how this improved understanding is being applied to inform solutions, such as novel diagnostic methods that allow antimicrobial use to be optimised and vaccination strategies for better controlling AMR. We highlight some future opportunities for AMR control informed by genomic sequencing, along with the remaining challenges that must be overcome to fully realise the potential of WGS approaches for international AMR control.}
 }
 
-@article{10.1038/s41576-019-0108-4, 
-year = {2019}, 
-title = {{Sequencing-based methods and resources to study antimicrobial resistance}}, 
-author = {Boolchandani, Manish and D’Souza, Alaric W. and Dantas, Gautam}, 
-journal = {Nature Reviews Genetics}, 
-issn = {1471-0056}, 
-doi = {10.1038/s41576-019-0108-4}, 
-pmid = {30886350}, 
-abstract = {{Antimicrobial resistance extracts high morbidity, mortality and economic costs yearly by rendering bacteria immune to antibiotics. Identifying and understanding antimicrobial resistance are imperative for clinical practice to treat resistant infections and for public health efforts to limit the spread of resistance. Technologies such as next-generation sequencing are expanding our abilities to detect and study antimicrobial resistance. This Review provides a detailed overview of antimicrobial resistance identification and characterization methods, from traditional antimicrobial susceptibility testing to recent deep-learning methods. We focus on sequencing-based resistance discovery and discuss tools and databases used in antimicrobial resistance studies. Next-generation sequencing has improved the identification and characterization of antimicrobial resistance. Focusing on sequence-based discovery of antibiotic resistance genes, this Review discusses computational strategies and resources for resistance gene identification in genomic and metagenomic samples, including recent deep-learning approaches.}}, 
-pages = {356--370}, 
-number = {6}, 
-volume = {20}, 
-keywords = {}
-}
-
 @article{10.1099/mgen.0.000294, 
 year = {2019}, 
 title = {{Comparison of long-read sequencing technologies in the hybrid assembly of complex bacterial genomes}}, 
@@ -558,39 +617,6 @@ pages = {e000294},
 number = {9}, 
 volume = {5}, 
 keywords = {}
-}
-
-@article{Hunt2017,
-  author    = {Hunt, Martin and Mather, Alison E. and S{\'a}nchez-Bus{\'o}, Leonor and Page, Andrew J. and Parkhill, Julian and Keane, Jacqueline A. and Harris, Simon R.},
-  title     = {{ARIBA}: rapid antimicrobial resistance genotyping directly from sequencing reads},
-  journal   = {Microbial Genomics},
-  year      = {2017},
-  volume    = {3},
-  number    = {10},
-  pages     = {e000131},
-  month     = {Sep},
-  doi       = {10.1099/mgen.0.000131},
-  pmid      = {29177089},
-  pmcid     = {PMC5695208},
-  abstract  = {Antimicrobial resistance (AMR) is one of the major threats to human and animal health worldwide, yet few high-throughput tools exist to analyse and predict the resistance of a bacterial isolate from sequencing data. Here we present a new tool, ARIBA, that identifies AMR-associated genes and single nucleotide polymorphisms directly from short reads, and generates detailed and customizable output. The accuracy and advantages of ARIBA over other tools are demonstrated on three datasets from Gram-positive and Gram-negative bacteria, with ARIBA outperforming existing methods.},
-  issn      = {2057-5858},
-  url       = {https://doi.org/10.1099/mgen.0.000131}
-}
-
-@article{Bradley2015,
-  author    = {Bradley, Phelim and Gordon, N. Claire and Walker, Timothy M. and Dunn, Laura and Heys, Simon and Huang, Bill and Earle, Sarah and Pankhurst, Louise J. and Anson, Luke and de Cesare, Mariateresa and Piazza, Paolo and Votintseva, Antonina A. and Golubchik, Tanya and Wilson, Daniel J. and Wyllie, David H. and Diel, Roland and Niemann, Stefan and Feuerriegel, Silke and Kohl, Thomas A. and Ismail, Nazir and Omar, Shaheed V. and Smith, E. Grace and Buck, David and McVean, Gil and Walker, A. Sarah and Peto, Tim E. A. and Crook, Derrick W. and Iqbal, Zamin},
-  title     = {Rapid antibiotic-resistance predictions from genome sequence data for \textit{Staphylococcus aureus} and \textit{Mycobacterium tuberculosis}},
-  journal   = {Nature Communications},
-  year      = {2015},
-  volume    = {6},
-  pages     = {10063},
-  month     = {Dec},
-  doi       = {10.1038/ncomms10063},
-  pmid      = {26686880},
-  pmcid     = {PMC4703848},
-  abstract  = {The rise of antibiotic-resistant bacteria has led to an urgent need for rapid detection of drug resistance in clinical samples, and improvements in global surveillance. Here we show how de Bruijn graph representation of bacterial diversity can be used to identify species and resistance profiles of clinical isolates. We implement this method for \textit{Staphylococcus aureus} and \textit{Mycobacterium tuberculosis} in a software package ('Mykrobe predictor') that takes raw sequence data as input, and generates a clinician-friendly report within 3 minutes on a laptop. For \textit{S. aureus}, the error rates of our method are comparable to gold-standard phenotypic methods, with sensitivity/specificity of 99.1\%/99.6\% across 12 antibiotics (using an independent validation set, n=470). For \textit{M. tuberculosis}, our method predicts resistance with sensitivity/specificity of 82.6\%/98.5\% (independent validation set, n=1,609); sensitivity is lower here, probably because of limited understanding of the underlying genetic mechanisms. We give evidence that minor alleles improve detection of extremely drug-resistant strains, and demonstrate feasibility of the use of emerging single-molecule nanopore sequencing techniques for these purposes.},
-  issn      = {2041-1723},
-  url       = {https://doi.org/10.1038/ncomms10063}
 }
 
 @article{Sereika2022,
@@ -635,4 +661,64 @@ keywords = {}
   issn      = {1362-4962},
   abstract  = {A multiple sequence alignment program, MAFFT, has been developed. The CPU time is drastically reduced as compared with existing methods. MAFFT includes two novel techniques. (i) Homo logous regions are rapidly identified by the fast Fourier transform (FFT), in which an amino acid sequence is converted to a sequence composed of volume and polarity values of each amino acid residue. (ii) We propose a simplified scoring system that performs well for reducing CPU time and increasing the accuracy of alignments even for sequences having large insertions or extensions as well as distantly related sequences of similar length. Two different heuristics, the progressive method (FFT-NS-2) and the iterative refinement method (FFT-NS-i), are implemented in MAFFT. The performances of FFT-NS-2 and FFT-NS-i were compared with other methods by computer simulations and benchmark tests; the CPU time of FFT-NS-2 is drastically reduced as compared with CLUSTALW with comparable accuracy. FFT-NS-i is over 100 times faster than T-COFFEE, when the number of input sequences exceeds 60, without sacrificing the accuracy.},
   url       = {https://doi.org/10.1093/nar/gkf436}
+}
+
+@article{10.12688/f1000research.21782.1,
+  author    = {Ryan R. Wick and Kathryn E. Holt},
+  title     = {Benchmarking of long-read assemblers for prokaryote whole genome sequencing [version 1; peer review: 4 approved]},
+  journal   = {F1000Research},
+  year      = {2019},
+  volume    = {8},
+  pages     = {2138},
+  doi       = {10.12688/f1000research.21782.1},
+  url       = {https://doi.org/10.12688/f1000research.21782.1}
+}
+
+
+@article{10.1128/AEM.02873-15,
+author = {S. Zhao and G. H. Tyson and Y. Chen and C. Li and S. Mukherjee and S. Young and C. Lam and J. P. Folster and J. M. Whichard and P. F. McDermott},
+title = {Whole-Genome Sequencing Analysis Accurately Predicts Antimicrobial Resistance Phenotypes in Campylobacter spp},
+journal = {Applied and Environmental Microbiology},
+volume = {82},
+number = {2},
+pages = {459-466},
+year = {2016},
+doi = {10.1128/AEM.02873-15},
+
+URL = {https://journals.asm.org/doi/abs/10.1128/aem.02873-15},
+eprint = {https://journals.asm.org/doi/pdf/10.1128/aem.02873-15}
+,
+    abstract = { 
+ABSTRACT 
+The objectives of this study were to identify antimicrobial resistance genotypes for Campylobacter and to evaluate the correlation between resistance phenotypes and genotypes using in vitro antimicrobial susceptibility testing and whole-genome sequencing (WGS). A total of 114 Campylobacter species isolates (82 C. coli and 32 C. jejuni) obtained from 2000 to 2013 from humans, retail meats, and cecal samples from food production animals in the United States as part of the National Antimicrobial Resistance Monitoring System were selected for study. Resistance phenotypes were determined using broth microdilution of nine antimicrobials. Genomic DNA was sequenced using the Illumina MiSeq platform, and resistance genotypes were identified using assembled WGS sequences through blastx analysis. Eighteen resistance genes, including tet(O), bla
+OXA-61, catA, lnu(C), aph(2″)-Ib, aph(2″)-Ic, aph(2′)-If, aph(2″)-Ig, aph(2″)-Ih, aac(6′)-Ie-aph(2″)-Ia, aac(6′)-Ie-aph(2″)-If, aac(6′)-Im, aadE, sat4, ant(6′), aad9, aph(3′)-Ic, and aph(3′)-IIIa, and mutations in two housekeeping genes (gyrA and 23S rRNA) were identified. There was a high degree of correlation between phenotypic resistance to a given drug and the presence of one or more corresponding resistance genes. Phenotypic and genotypic correlation was 100\% for tetracycline, ciprofloxacin/nalidixic acid, and erythromycin, and correlations ranged from 95.4\% to 98.7\% for gentamicin, azithromycin, clindamycin, and telithromycin. All isolates were susceptible to florfenicol, and no genes associated with florfenicol resistance were detected. There was a strong correlation (99.2\%) between resistance genotypes and phenotypes, suggesting that WGS is a reliable indicator of resistance to the nine antimicrobial agents assayed in this study. WGS has the potential to be a powerful tool for antimicrobial resistance surveillance programs.
+ }
+}
+
+@article{TamamuraAndoh2021,
+  title = {Duplication of blaCTX-M-1 and a class 1 integron on the chromosome enhances antimicrobial resistance in Escherichia coli isolated from racehorses in Japan},
+  volume = {27},
+  ISSN = {2213-7165},
+  url = {http://dx.doi.org/10.1016/j.jgar.2021.10.004},
+  DOI = {10.1016/j.jgar.2021.10.004},
+  journal = {Journal of Global Antimicrobial Resistance},
+  publisher = {Elsevier BV},
+  author = {Tamamura-Andoh,  Yukino and Niwa,  Hideaki and Kinoshita,  Yuta and Uchida-Fujii,  Eri and Arai,  Nobuo and Watanabe-Yanai,  Ayako and Iwata,  Taketoshi and Akiba,  Masato and Kusumoto,  Masahiro},
+  year = {2021},
+  month = dec,
+  pages = {225–227}
+}
+
+@article{Bortolaia2020,
+  author = {Bortolaia, Valeria and Kaas, Rolf S. and Ruppe, Etienne and Roberts, Marilyn C. and Schwarz, Stefan and Cattoir, Vincent and Philippon, Anne and Allesøe, Rasmus L. and Rebelo, Ana R. and Florensa, Anna F. and Fagelhauer, Lara and Chakraborty, Trinad and Neumann, Bärbel and Werner, Guido and Bender, Jörg K. and Stingl, Kerstin and Nguyen, Minh and Coppens, Julie and Xavier, Babak B. and Malhotra-Kumar, Surbhi and Westh, Henrik and Pinholt, Mette and Anjum, Muna F. and Duggett, Natalie A. and Kempf, Isabelle and Nykäsenoja, Seppo and Olkkola, Sanna and Wieczorek, Kinga and Amaro, Amelia and Clemente, Luisa and Mossong, Joël and Losch, Stephanie and Ragimbeau, Catherine and Lund, Ole and Aarestrup, Frank M.},
+  title = {ResFinder 4.0 for predictions of phenotypes from genotypes},
+  journal = {Journal of Antimicrobial Chemotherapy},
+  volume = {75},
+  number = {12},
+  pages = {3491--3500},
+  year = {2020},
+  month = {December},
+  doi = {10.1093/jac/dkaa345},
+  pmid = {32780112},
+  pmcid = {PMC7662176}
 }

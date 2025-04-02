@@ -35,8 +35,8 @@
 \DeclareOption{draft}{\PassOptionsToClass{draft}{article}}
 \DeclareOption{times}{\@timestrue}
 \DeclareOption{helvet}{\@helvettrue}
-\DeclareOption{twocolumn}{\@tmptwocolumntrue}
-%\DeclareOption{onecolumn}{\@tmptwocolumnfalse}
+%\DeclareOption{twocolumn}{\@tmptwocolumntrue}
+\DeclareOption{onecolumn}{\@tmptwocolumnfalse}
 \DeclareOption{submit}{\@submittrue \@tmptwocolumnfalse}
 
 \ProcessOptions
@@ -506,7 +506,7 @@
 
 
 
-\lfoot[\bBioRXiv]{\dAuthor}
+%\lfoot[\bBioRXiv]{\dAuthor}
 \rfoot[\dAuthor]{\cBioRXiv}
 
 \rhead[]{\footnotesize\rightmark}
